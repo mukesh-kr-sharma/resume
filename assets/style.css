@@ -1,0 +1,217 @@
+@import url('http://fonts.cdnfonts.com/css/avenir-next-lt-pro');
+
+@import url('http://fonts.cdnfonts.com/css/calibri-light');
+
+:root {
+    --light-blue: rgb(189, 215, 238);
+    --primary-blue: rgb(0, 112, 192);
+    --primary-green: rgb(0, 176, 80);
+    --primary-yellow: rgb(255, 164, 1);
+    --heading-font: 'Avenir Next LT Pro', sans-serif;
+    --body-font: 'Calibri Light', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: medium;
+}
+
+header {
+    background-color: var(--light-blue);
+    display: grid;
+    grid-template-columns: 2fr 6fr 3fr;
+    padding: 20px 50px;
+}
+
+footer {
+    background-color: var(--primary-blue);
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.content {
+    margin: auto;
+}
+
+.header-left .content {
+    border-radius: 50%;
+    border: 3px solid var(--primary-blue);
+    height: 160px;
+    width: 160px;
+}
+
+.header-left>.content>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.header-middle {
+    margin: 10px 20px;
+}
+
+.heading-font {
+    font-family: var(--heading-font);
+    color: var(--primary-blue);
+    font-size: xx-large;
+    letter-spacing: 2px;
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+
+.header-middle>.content>hr {
+    margin: 10px 0px;
+    height: 5px;
+    background: var(--primary-blue);
+    border: none;
+}
+
+.header-right {
+    margin: 10px 20px 10px auto;
+}
+
+.header-right td {
+    padding: 3px;
+    text-align: right;
+}
+
+.header-right a {
+    color: black;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px 50px;
+}
+
+section>.content {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-gap: 3rem;
+}
+
+.company-detail {
+    font-weight: bold;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.role {
+    font-weight: bold;
+}
+
+.skills {
+    margin-bottom: 20px;
+}
+
+.skills>button {
+    padding: 4px 10px;
+    margin: 4px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.5);
+}
+
+.education {
+    line-height: 150%;
+}
+
+.education>div>* {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education>div {
+    margin-bottom: 10px;
+}
+
+.certificate-achievement>div {
+    padding: 0 25px;
+    margin: auto auto 20px auto;
+    line-height: 180%;
+}
+
+.light-blue-hr {
+    height: 3px;
+    background-color: var(--light-blue);
+    margin: 5px 0;
+    border: none;
+}
+
+.bg-green {
+    background-color: var(--primary-green);
+}
+
+.bg-yellow {
+    background-color: var(--primary-yellow);
+}
+
+.download-icon {
+    height: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: var(--light-blue);
+    box-shadow: 0px 0px 10px var(--primary-blue);
+    position: fixed;
+    bottom: 12px;
+    right: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.download-icon > svg {
+    height: 100%;
+    margin-left: 3px;
+}
+
+.download-icon:hover span {
+    max-width: 10rem;
+    padding-right: 5px;
+}
+
+.download-resume-text {
+    max-width: 0;
+    -webkit-transition: max-width 0.5s;
+    transition: max-width 0.5s;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+/* 
+Accordian
+*/
+.accordion-btn {
+    background-color: rgba(238, 238, 238, 0.3);
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active,
+.accordion-btn:hover {
+    background-color: rgba(238, 238, 238, 0.9);
+}
+
+.panel {
+    padding: 0 30px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 1rem;
+}
